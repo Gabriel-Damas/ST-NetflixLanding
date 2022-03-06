@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tv Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My list</a></li>
+        </ul>
+        <div class="search">
+            <imput type="text" placeholder="search"></imput>
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="bg.jpg" class="bg">
+        <div class="content">
+            <img src="name.png" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit ab tenetur adipisci totam suscipit rem aut ea, explicabo et architecto debitis voluptates dolorem esse quae amet nostrum aperiam ipsam reiciendis?</p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden='true'>Assistir</i></a>
+                <a href="#"><i class="fa fa-plus" aria-hidden='true'>Minha lista</i></a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo()"><img src="play.png">Watch Trailer </a>
+    </div>
+    <div class="trailer">
+        <video src="Disney's Mulan - Official Teaser.mp4" width="1300" height="600" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggleVideo()">
+    </div>
+</body>
+    <script src="script.js"></script>
+</html>

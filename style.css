@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900 & display=trocar');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo img{
+    max-width: 150px;
+}
+
+.navigation{
+    display:flex;
+}
+
+.navigation li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navigation li:hover a{
+    color: red;
+}
+
+.search {
+    position: relative;
+    color: white;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+}
+
+.movieTitle{
+    max-width: 250px;
+}
+
+.banner .content h4{
+    color: rgba(225, 255, 255,0.5);
+    font-weight: 500;
+}
+
+.banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(225, 255, 255,0.5);
+}
+
+.banner .content h4 span:first-child{
+    padding-left: 0;
+}
+
+.banner .content h4 span:Last-child{
+    border-right: none;
+}
+
+.banner .content h4 span i { 
+    background: red;
+    color: white;
+    padding: 0 8px;
+    display: inline-block;
+    font-style: normal;
+    border-radius: 2px;
+}
+
+.banner .content p{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: white;
+    margin: 10px 0 20px;
+}
+
+.banner .content .buttons{
+    position: relative;
+}
+
+.banner .content .buttons a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: red;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.banner .content .buttons a{
+    margin-right: 0.50rem;
+    margin-right: 10px;
+}
+
+.banner .content .buttons a:nth-child(2){
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(225, 255, 255,0.1);
+}
+
+.banner .content .buttons a:hover:nth-child(2){
+    background: red;
+}
+
+.play{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.play img{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 50px;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor:pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+    .navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    .banner{
+        padding: 100px 50px;
+    }
+
+    .banner .play{
+        left: 50px;
+        font-size: 1em;
+    }
+
+    .play img{
+        margin-left: 10px;
+        max-width: 40px;
+    }
+
+    .trailer video{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        padding: 20px;
+    }
+
+    .banner {
+        padding: 200px 20px 100px;
+    }
+
+    .banner .play{
+        left: 20px;
+        font-size: 1em;
+        bottom:30px;
+    }
+}
